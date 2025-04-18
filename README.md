@@ -1,3 +1,4 @@
+![screencapture-starlight-soul-scribe-vercel-app-2025-04-18-21_01_46](https://github.com/user-attachments/assets/e14671b0-e4e0-449a-b43b-8e0402b0e0bc)
 
 # Starlight Soul Scribe
 
