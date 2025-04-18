@@ -13,7 +13,7 @@ const Index = () => {
   const { user, loading } = useAuth();
   
   const handleLearnMore = () => {
-    window.open('https://www.astro.com/horoscope/about-astrology.html', '_blank', 'noopener,noreferrer');
+    window.open('https://www.astrology.com/us/home.aspx', '_blank', 'noopener,noreferrer');
   };
 
   return (
