@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,7 +62,38 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				cosmic: {
+					DEFAULT: '#8A2BE2',
+					50: '#E5D9F9',
+					100: '#D5C1F6',
+					200: '#B691F0',
+					300: '#9661E9',
+					400: '#7732E3',
+					500: '#5714C5',
+					600: '#42109A',
+					700: '#2E0C6E',
+					800: '#1A0742',
+					900: '#060316',
+				},
+				starlight: {
+					DEFAULT: '#FFD700',
+					50: '#FFF9E5',
+					100: '#FFF5CC',
+					200: '#FFEC99',
+					300: '#FFE466',
+					400: '#FFDB33',
+					500: '#FFD700',
+					600: '#CCA900',
+					700: '#997F00',
+					800: '#665400',
+					900: '#332A00',
+				},
+			},
+			fontFamily: {
+				sans: ['Inter', 'sans-serif'],
+				serif: ['Cormorant Garamond', 'serif'],
+				mystic: ['Cinzel', 'serif'],
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -84,12 +116,32 @@ export default {
 					to: {
 						height: '0'
 					}
-				}
+				},
+				float: {
+					'0%, 100%': { transform: 'translateY(0)' },
+					'50%': { transform: 'translateY(-10px)' },
+				},
+				twinkle: {
+					'0%, 100%': { opacity: '1' },
+					'50%': { opacity: '0.5' },
+				},
+				'gradient-shift': {
+					'0%': { backgroundPosition: '0% 50%' },
+					'50%': { backgroundPosition: '100% 50%' },
+					'100%': { backgroundPosition: '0% 50%' },
+				},
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
-			}
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'float': 'float 6s ease-in-out infinite',
+				'twinkle': 'twinkle 3s ease-in-out infinite',
+				'gradient-shift': 'gradient-shift 15s ease infinite',
+			},
+			backgroundImage: {
+				'cosmic-gradient': 'linear-gradient(to bottom right, #1A0742, #42109A, #5714C5)',
+				'starfield': 'radial-gradient(circle at center, rgba(255, 255, 255, 0.15) 0.5px, transparent 1px), radial-gradient(circle at center, rgba(255, 255, 255, 0.1) 0.25px, transparent 0.5px)',
+			},
 		}
 	},
 	plugins: [require("tailwindcss-animate")],
