@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -97,11 +96,6 @@ const AuthForms: React.FC = () => {
             </CardFooter>
           </form>
         </Card>
-        
-        <div className="mt-4 text-center text-sm text-cosmic-300">
-          <p>Demo credentials:</p>
-          <p>Email: demo@example.com | Password: password123</p>
-        </div>
       </TabsContent>
       
       <TabsContent value="signup">
