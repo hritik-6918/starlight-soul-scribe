@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Button } from '@/components/ui/button';
+import { ExternalLink } from 'lucide-react';
 import { useAuth } from '@/contexts/AuthContext';
 import Header from '@/components/Header';
 import StarBackground from '@/components/StarBackground';
@@ -11,6 +12,10 @@ import AstrologyForm from '@/components/AstrologyForm';
 const Index = () => {
   const { user, loading } = useAuth();
   
+  const handleLearnMore = () => {
+    window.open('https://www.astro.com/horoscope/about-astrology.html', '_blank', 'noopener,noreferrer');
+  };
+
   return (
     <div className="min-h-screen flex flex-col">
       <StarBackground />
@@ -49,8 +54,12 @@ const Index = () => {
                   Discover your cosmic path with AI-powered astrological insights tailored to your unique celestial blueprint.
                 </p>
                 <div className="flex flex-wrap gap-4 pt-4">
-                  <Button className="bg-cosmic-500 hover:bg-cosmic-400 text-white">
-                    Learn More
+                  <Button 
+                    onClick={handleLearnMore} 
+                    className="bg-cosmic-500 hover:bg-cosmic-400 text-white"
+                  >
+                    Learn More 
+                    <ExternalLink className="ml-2 h-4 w-4" />
                   </Button>
                 </div>
               </div>
