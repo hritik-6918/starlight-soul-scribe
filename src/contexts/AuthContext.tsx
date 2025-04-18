@@ -1,4 +1,3 @@
-
 import React, { createContext, useContext, useState, useEffect } from 'react';
 import { toast } from '@/components/ui/use-toast';
 
@@ -27,7 +26,7 @@ const MOCK_USERS = [
     email: 'demo@example.com',
     password: 'password123',
     name: 'Demo User',
-    requestsRemaining: 3,
+    requestsRemaining: 5,
   },
 ];
 
@@ -87,13 +86,13 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
       return false;
     }
 
-    // Create new user
+    // Create new user with 5 requests
     const newUser = {
       id: (MOCK_USERS.length + 1).toString(),
       email,
       password,
       name,
-      requestsRemaining: 3,
+      requestsRemaining: 5,
     };
     
     MOCK_USERS.push(newUser);
